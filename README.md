@@ -7,7 +7,7 @@ This repo contains the automation of daily/weekly cloud administration activitie
 
 The language of choice is Ansible 
 
-# Importing variables
+# Importing variables (FUTURE)
 
 A configuration file will store the key/value pairs to identify existing AWS infrastructure, such as VPC ID, etc.
 Then, Ansible will put them as environment variables.
