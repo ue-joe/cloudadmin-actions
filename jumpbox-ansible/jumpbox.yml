@@ -44,6 +44,7 @@
           assign_public_ip: yes
           instance_tags:
             Name: JumpBoxSSH
+            AnsibleGroup: jumpboxes
         register: ec2
 
       - name: Add new instance to host group

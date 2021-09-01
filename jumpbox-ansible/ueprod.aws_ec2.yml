@@ -1,0 +1,19 @@
+# doc: https://docs.ansible.com/ansible/latest/plugins/inventory.html#id3
+# Example using constructed features to create groups and set ansible_host
+plugin: amazon.aws.aws_ec2
+cache: yes
+regions:
+  - us-east-1
+  - us-east-2
+  - us-west-1
+keyed_groups:
+  # Create a group for each value of the Application tag
+  - key: tags.AnsibleGroup
+    separator: ''
+  # Create a group per region e.g. aws_region_us_east_2
+  - key: placement.region
+    prefix: aws_region
+#compose:
+  # Use the private IP address to connect to the host
+  # (note: this does not modify inventory_hostname, which is set via I(hostnames))
+  #ansible_host: private_ip_address
