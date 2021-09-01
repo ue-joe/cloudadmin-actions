@@ -22,3 +22,9 @@ The aws ec2 inventory plugin provided by the amazon.aws collection is enabled wh
 You can validate it works OK with
 
     ansible-inventory -i ueprod.aws_ec2.yml --graph
+
+# Jumpbox tasks
+
+Pre-requisites:
+
+    ansible-galaxy install clouddrove.ansible_role_common

@@ -1,0 +1,9 @@
+---
+  - name: Configure instance(s)
+    hosts: management_servers
+    become: True
+    remote_user: ubuntu
+    gather_facts: True
+    roles:
+      - clouddrove.ansible_role_common #https://galaxy.ansible.com/clouddrove/ansible_role_common
+
