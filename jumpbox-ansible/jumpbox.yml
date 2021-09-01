@@ -14,6 +14,11 @@
         tags:
           - start
 
+      # Gather IP facts from ipify.org
+      - name: Get my public IP
+        ipify_facts:
+        register: ipify_public_ip 
+
       - name: SSH security group rule descriptions
         amazon.aws.ec2_group:
           name: "{{ sg_name }}"
@@ -25,7 +30,7 @@
             - proto: tcp
               ports:
               - 22
-              cidr_ip: 2.3.4.5/32
+              cidr_ip: "{{ ipify_public_ip }}/32"
               rule_desc: "SSH from Workstation"
         tags:
           - start
