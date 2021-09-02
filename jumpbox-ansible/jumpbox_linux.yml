@@ -12,4 +12,4 @@
     tasks:
       - name: Process some logs
         shell: 
-          cmd: tail /var/log/messages
+          cmd: sudo tail /var/log/syslog
