@@ -1,4 +1,4 @@
 region: us-east-1
 image: ami-0d5eff06f840b45e9
 sshkeyname: joe_keypair
-ansible_ssh_user: ec2-user #for Amazon linux
+ansible_ssh_user: ubuntu #for Ubuntu linux. For Amazon, it would be ec2-user

@@ -27,4 +27,8 @@ You can validate it works OK with
 
 Pre-requisites:
 
-    ansible-galaxy install clouddrove.ansible_role_common
+    ansible-galaxy collection install devsec.hardening
+
+Execute this playbook like this
+
+    ansible-playbook -i ueprod.aws_ec2.yml jumpbox_linux.yml

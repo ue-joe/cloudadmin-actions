@@ -4,6 +4,8 @@
     become: True
     remote_user: ubuntu
     gather_facts: True
+    collections:
+      - devsec.hardening
     roles:
-      - clouddrove.ansible_role_common #https://galaxy.ansible.com/clouddrove/ansible_role_common
-
+      - devsec.hardening.os_hardening #https://galaxy.ansible.com/devsec/hardening
+      - devsec.hardening.ssh_hardening
