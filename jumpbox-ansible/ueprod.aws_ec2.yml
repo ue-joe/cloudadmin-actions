@@ -1,7 +1,7 @@
 # doc: https://docs.ansible.com/ansible/latest/plugins/inventory.html#id3
 # Example using constructed features to create groups and set ansible_host
 plugin: amazon.aws.aws_ec2
-cache: yes
+cache: no 
 regions:
   - us-east-1
   - us-east-2
