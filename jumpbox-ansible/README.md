@@ -15,6 +15,16 @@ To start the jumpbox (created in another terraform repo, see https://github.com/
 To stop the jumpbox
 
     ansible-playbook -i hosts -t stop site.yml
+    
+To deploy a valid Python venv with the latest ansible:
+
+    cd 
+    curl https://uedemofiles2021.blob.core.windows.net/pythonfiles/ansible-latest.tgz -o ansible-latest.tgz
+    tar -xzf ansible-latest.tgz
+    sudo ln -s ~/ansible /usr/local/ansible 
+    source /usr/local/ansible/bin/activate
+    mkdir -p ~/.ansible/collections
+    mv /usr/local/ansible/collections/ansible_collections/* ~/.ansible/collections
 
 # Using Ansible with AWS
 
